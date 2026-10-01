@@ -37,7 +37,7 @@ I always like the dataframe first
 ```{r}
 ggp_temp_scatterplot = 
   weather_df |>
-  ggplot(aes(x = tmin,y = tamx)) +
+  ggplot(aes(x = tmin,y = tmax)) +
   geom_point()
 
 ggp_temp_scatterplot
@@ -58,7 +58,7 @@ weather_df |>
 ##为什么没图片生成了
 ```{r}
 weather_df |>
-  ggplot(aes(x = tmin,y = tmax) +
+  ggplot(aes(x = tmin,y = tmax)) +
   geom_point(aes(color = name),alpha = 0.5)+
   geom_smooth(se = FALSE)
 ```
