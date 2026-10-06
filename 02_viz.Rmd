@@ -1,0 +1,30 @@
+---
+title: "02_viz"
+author: "Shiyu KANG"
+date: "2026-10-06"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(ggridges)
+
+library(p8105.datasets)
+data("weather_df")
+```
+
+```{r}
+weather_df |> 
+  ggplot(aes(x = tmax, y = tmin, color = name)) +
+  geom_point() +
+  labs(
+    title = "Temperature",
+    x = "Max Temperature (C)",
+    y = "Min Temperature (C)",
+    color = "Location",
+    caption = "Data from NOAA"
+  ) +
+```
+
